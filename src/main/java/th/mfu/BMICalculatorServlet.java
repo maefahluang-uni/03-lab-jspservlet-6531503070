@@ -15,9 +15,8 @@ public class BMICalculatorServlet extends HttpServlet{
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //TODO: get parameter from request: "weight" and "height"
         double weight = Double.parseDouble(request.getParameter("weight"));
-        double height = Double.parseDouble(request.getParameter("height"));
+        double heightInMeters = Double.parseDouble(request.getParameter("height"));
         //TODO: calculate bmi
-        double heightInMeters = height; // meters
         double BMI = Math.round(weight / (heightInMeters * heightInMeters));
         //TODO: determine the built from BMI
         String BUILT;
